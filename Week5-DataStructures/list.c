@@ -29,6 +29,7 @@ int main(int argc, char *argv[])
     }
 
     node *ptr = list;
+
     while (ptr != NULL)
     {
         printf("%i\n", ptr->number);
@@ -36,6 +37,7 @@ int main(int argc, char *argv[])
     }
 
     ptr = list;
+    
     while (ptr != NULL)
     {
         node *next = ptr->next;
