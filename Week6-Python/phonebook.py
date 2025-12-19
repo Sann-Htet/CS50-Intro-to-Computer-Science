@@ -1,9 +1,8 @@
-people = {
-    "Carter": "+1-353-546-1999",
-    "David": "+1-345-664-2345"
-}
+import csv
 
-name = input("Name: ")
-if name in people:
-    number = people[name]
-    print(f"Number: {number}")
+with open("phonebook.csv", "a") as file:
+    name = input("Name: ")
+    number = input("Number: ")
+
+    writer = csv.DictWriter(file, fieldnames=["name", "number"])
+    writer.writerow({"name": name, "number": number})
